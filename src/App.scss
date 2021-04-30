@@ -1,0 +1,15 @@
+.App {
+  text-align      : center;
+  background-color: white;
+  height          : 100vh;
+  justify-content : center;
+  display         : flex;
+  flex-direction  : column;
+  align-items     : center;
+
+  .cards {
+    position: relative;
+    height  : 100%;
+    width   : 100%;
+  }
+}

@@ -1,0 +1,166 @@
+/* Card styling */
+@mixin absoluteOverlap {
+    width        : 100%;
+    height       : 100%;
+    position     : absolute;
+    top          : 0;
+    left         : 0;
+    border-radius: 20px;
+}
+
+
+.cardContainer {
+    background-color: rgb(35, 40, 42);
+    width           : 380px;
+    height          : 240px;
+    border-radius   : 20px;
+    box-shadow      : 0 5px 6px 3px #06060645;
+    position        : relative;
+    position        : absolute;
+    right           : 50%;
+    z-index         : 90;
+    top             : 40%;
+
+    &::after {
+        content          : "";
+        display          : block;
+        position         : absolute;
+        z-index          : 1;
+        bottom           : -3px;
+        height           : 13px;
+        width            : 7.5%;
+        left             : -4%;
+        margin           : 0 0 0 50%;
+        -moz-transform   : rotateX(45deg) scale(10, 0.75);
+        -ms-transform    : rotateX(45deg) scale(10, 0.75);
+        -o-transform     : rotateX(45deg) scale(10, 0.75);
+        -webkit-transform: rotateX(45deg) scale(10, 0.75);
+        transform        : rotateX(45deg) scale(10, 0.75);
+        background       : #000;
+        -moz-box-shadow  : 0 0 1px #000,
+            0 0 2px #000,
+            0 0 3px #000,
+            0 0 5px #000,
+            0 0 5px #000,
+            0 0 5px #000,
+            0 0 7px #000,
+            0 0 12px #000;
+        -o-box-shadow: 0 0 1px #000,
+            0 0 2px #000,
+            0 0 3px #000,
+            0 0 5px #000,
+            0 0 5px #000,
+            0 0 5px #000,
+            0 0 7px #000,
+            0 0 12px #000;
+        -webkit-box-shadow: 0 0 1px #000,
+            0 0 2px #000,
+            0 0 3px #000,
+            0 0 5px #000,
+            0 0 5px #000,
+            0 0 5px #000,
+            0 0 7px #000,
+            0 0 12px #000;
+        -ms-box-shadow: 0 0 1px #000,
+            0 0 2px #000,
+            0 0 3px #000,
+            0 0 5px #000,
+            0 0 5px #000,
+            0 0 5px #000,
+            0 0 7px #000,
+            0 0 12px #000;
+        box-shadow: 0 0 1px #000,
+            0 0 2px #000,
+            0 0 3px #000,
+            0 0 5px #000,
+            0 0 5px #000,
+            0 0 5px #000,
+            0 0 7px #000,
+            0 0 12px #000;
+        opacity      : 1;
+        border-radius: 20px;
+    }
+
+    .card {
+        width          : 100%;
+        height         : 100%;
+        border-radius  : 20px;
+        padding        : 20px;
+        box-sizing     : border-box;
+        display        : flex;
+        flex-direction : column;
+        justify-content: space-between;
+        z-index        : 3;
+        position       : absolute;
+        border-radius  : 20px;
+
+        .blackGradient {
+            @include absoluteOverlap;
+            opacity   : 0.6;
+            background: linear-gradient(10deg, #22222259 0%, #11111100 58%, #ffffffe6 100%);
+        }
+
+        .bgImage {
+            position     : absolute;
+            top          : 0%;
+            left         : 0%;
+            width        : 100%;
+            height       : 100%;
+            z-index      : 1;
+            border-radius: 20px;
+            overflow     : hidden;
+            display      : grid;
+
+            svg {
+                align-self  : center;
+                justify-self: center;
+            }
+        }
+
+        .header {
+            display        : flex;
+            justify-content: space-between;
+        }
+
+        .body {}
+
+        .footer {
+            display        : flex;
+            color          : white;
+            justify-content: space-between;
+            z-index        : 2;
+            border-radius  : 0 0 20px 20px;
+
+            .expiryContainer {
+                display: flex;
+
+                .validThru {
+                    width      : 10%;
+                    font-size  : 10px;
+                    line-height: 10px;
+                }
+
+                .expiryDate {
+                    font-size: 17px;
+                }
+            }
+
+            .section {
+                .cardNumbers {
+                    display   : flex;
+                    column-gap: 15px;
+
+                    .numberSection {
+                        display: flex;
+
+                        .number {
+                            color      : white;
+                            font-size  : 20px;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

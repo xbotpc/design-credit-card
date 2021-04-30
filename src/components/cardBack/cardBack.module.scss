@@ -1,0 +1,60 @@
+/* Card styling */
+
+.cardContainer {
+    width          : 380px;
+    height         : 240px;
+    border-radius  : 20px;
+    box-sizing     : border-box;
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-between;
+    box-shadow     : 0 5px 6px 3px #06060645;
+    position       : relative;
+    position       : absolute;
+    left           : 39%;
+    bottom         : 38%;
+
+    .bgImage {
+        position     : absolute;
+        top          : 0%;
+        left         : 0%;
+        width        : 100%;
+        height       : 100%;
+        z-index      : 1;
+        border-radius: 20px;
+        overflow     : hidden;
+        display      : grid;
+
+        svg {
+            align-self  : center;
+            justify-self: center;
+        }
+    }
+
+    .header {
+        height : 60%;
+        z-index: 3;
+
+        .magneticStrip {
+            height          : 25%;
+            background-color: darkgray;
+            margin-top      : 20px;
+        }
+
+        .signaturePanel {
+            height          : 20%;
+            margin-top      : 20px;
+            width           : 65%;
+            background-color: darkgray;
+            display         : flex;
+            flex-direction  : column;
+
+            .horizontalLine {
+                width           : 100%;
+                background-color: #615f5f;
+                height          : 2px;
+                margin-top      : 3px;
+            }
+        }
+    }
+}
