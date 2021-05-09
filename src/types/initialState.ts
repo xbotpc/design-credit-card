@@ -1,4 +1,4 @@
-export default interface initialState {
+export default interface InitialState {
     bgColor: string,
     imageSize: string,
     opacityValue: string

@@ -1,26 +1,22 @@
 import { useSelector } from 'react-redux';
 import { ReactComponent as StarPattern } from '../../images/star-filled.svg';
 import { ReactComponent as CompanyNameIcon } from '../../images/visa.svg';
-import initialState from '../../types/initialState';
+import InitialState from '../../types/initialState';
 import styles from './cardFront.module.scss';
+import HexPattern from '../../images/hex-pattern.png';
 
-interface CardFrontProps {
-    bgImageSize: string;
-    opacity: string;
-    patternColor?: string;
-}
-
-const CardFront = ({ bgImageSize, opacity, patternColor }: CardFrontProps) => {
-    const { bgColor } = useSelector((state: initialState) => state);
-    console.log('aa', bgColor);
+const CardFront = () => {
+    const { bgColor, imageSize, opacityValue } = useSelector((state: InitialState) => state);
     return (
         <div id={'cardFront'} className={styles.cardContainer}>
             <div className={styles.card} style={{
-                backgroundColor: bgColor
+                backgroundColor: bgColor,
+                backgroundImage: `url(${HexPattern})`,
+                backgroundSize: `${imageSize}%`,
             }}>
                 <div className={styles.blackGradient} />
                 <div className={styles.bgImage}>
-                    {/* <StarPattern width={`${(parseInt(bgImageSize, 10) + 100).toString()}%`} opacity={`${opacity}%`} /> */}
+                    {/* <StarPattern width={`${(parseInt(imageSize, 10) + 100).toString()}%`} opacity={`${opacityValue}%`} /> */}
                 </div>
                 <div className={styles.header}></div>
                 <div className={styles.footer}>
@@ -61,7 +57,7 @@ const CardFront = ({ bgImageSize, opacity, patternColor }: CardFrontProps) => {
                     <CompanyNameIcon />
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

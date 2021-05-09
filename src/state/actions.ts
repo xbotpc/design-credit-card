@@ -1,7 +1,7 @@
 const actions = {
-    INCREMENT: 'INCREMENT',
-    DECREMENT: 'DECREMENT',
-    CHANGE_BG_COLOR: 'CHANGE_BG_COLOR'
+    BG_COLOR: 'CHANGE_BG_COLOR',
+    IMAGE_SIZE: 'IMAGE_SIZE',
+    OPACITY: 'OPACITY',
 }
 
-export default actions;
+export { actions as ACTIONS };
