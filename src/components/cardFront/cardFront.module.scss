@@ -21,16 +21,37 @@
     z-index         : 90;
     top             : 30%;
 
-    @media screen and (max-width:1054px) {
-        width : 60%;
-        height: 50%;
+    @media screen and (min-width: 320px) {
+        width : 70%;
+        height: 24%;
         left  : 5%;
-        top   : 30%;
+        top   : 60%;
     }
 
-    @media screen and (max-width: 500px) {
-        width: 60%;
+    @media screen and (min-width: 500px) {
+        width : 60%;
         height: 40%;
+    }
+
+    @media screen and (min-width: 768px) {
+        width : 40%;
+        height: 45%;
+        left  : 20%;
+        top   : 40%;
+    }
+
+    @media screen and (min-width: 834px) {
+        width : 40%;
+        height: 40%;
+        left  : 21%;
+        top   : 40%;
+    }
+
+    @media screen and (min-width:1024px) {
+        width : 70%;
+        height: 55%;
+        left  : 9%;
+        top   : 29%;
     }
 
     &::after {
@@ -108,6 +129,14 @@
         background-repeat  : repeat-x;
         background-position: center;
 
+        @media screen and (min-width: 320px) {
+            padding: 10px;
+        }
+
+        @media screen and (min-width: 500px) {
+            padding: 20px;
+        }
+
         .blackGradient {
             @include absoluteOverlap;
             opacity   : 0.6;
@@ -144,18 +173,36 @@
             justify-content: space-between;
             z-index        : 2;
             border-radius  : 0 0 20px 20px;
+            column-gap     : 10px;
 
             .expiryContainer {
-                display: flex;
+                display   : flex;
+                column-gap: 5px;
 
                 .validThru {
                     width      : 10%;
                     font-size  : 10px;
                     line-height: 10px;
+
+                    @media (min-width:320px) {
+                        font-size: 0.6rem;
+                    }
+
+                    @media (min-width:768px) {
+                        font-size: 10px;
+                    }
                 }
 
                 .expiryDate {
                     font-size: 17px;
+
+                    @media (min-width:320px) {
+                        font-size: 0.9rem;
+                    }
+
+                    @media (min-width:768px) {
+                        font-size: 17px;
+                    }
                 }
             }
 
@@ -171,6 +218,14 @@
                             color      : white;
                             font-size  : 20px;
                             font-weight: 700;
+
+                            @media (min-width:320px) {
+                                font-size: 0.6em;
+                            }
+
+                            @media (min-width:768px) {
+                                font-size: 17px;
+                            }
                         }
                     }
                 }

@@ -16,18 +16,40 @@
     background-repeat  : repeat-x;
     background-position: center;
 
-    @media screen and (max-width:1024px) {
+
+    @media screen and (min-width:320px) {
         width : 60%;
-        height: 50%;
+        height: 24%;
         left  : 30%;
-        bottom: 28%;
+        bottom: 21%;
     }
 
-    @media screen and (max-width:500px) {
+    @media screen and (min-width: 500px) {
         width : 60%;
         height: 40%;
         left  : 30%;
-        bottom: 37%;
+        bottom: 44%;
+    }
+
+    @media screen and (min-width: 768px) {
+        width : 40%;
+        height: 45%;
+        left  : 37%;
+        bottom: 22%;
+    }
+
+    @media screen and (min-width: 834px) {
+        width : 40%;
+        height: 40%;
+        left  : 38%;
+        bottom: 27%;
+    }
+
+    @media screen and (min-width:1024px) {
+        width : 70%;
+        height: 55%;
+        left  : 38%;
+        bottom: 25%;
     }
 
     .bgImage {
@@ -64,6 +86,14 @@
             background-color: darkgray;
             display         : flex;
             flex-direction  : column;
+
+            @media (min-width:320px) {
+                width: 83%;
+            }
+
+            @media screen and (min-width:500px) {
+                width: 65%;
+            }
 
             .horizontalLine {
                 width           : 100%;

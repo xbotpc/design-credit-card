@@ -18,16 +18,26 @@
     display : grid;
 
     .container {
-      height      : 400px;
       position    : relative;
+      height      : 400px;
       width       : 530px;
       display     : grid;
       align-self  : center;
       justify-self: center;
 
-      @media screen and (max-width: 500px) {
+      @media screen and (min-width: 320px) {
+        width : 100vW;
+        height: 100vh;
+      }
+
+      @media screen and (min-width: 500px) {
         width : 100vW;
         height: 80%;
+      }
+
+      @media screen and (min-width: 1024px) {
+        height: 400px;
+        width : 530px;
       }
     }
   }
