@@ -16,6 +16,20 @@
     background-repeat  : repeat-x;
     background-position: center;
 
+    @media screen and (max-width:1024px) {
+        width : 60%;
+        height: 50%;
+        left  : 30%;
+        bottom: 28%;
+    }
+
+    @media screen and (max-width:500px) {
+        width : 60%;
+        height: 40%;
+        left  : 30%;
+        bottom: 37%;
+    }
+
     .bgImage {
         position     : absolute;
         top          : 0%;

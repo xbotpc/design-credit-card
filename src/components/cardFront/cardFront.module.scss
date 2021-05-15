@@ -17,9 +17,21 @@
     box-shadow      : 0 5px 6px 3px #06060645;
     position        : relative;
     position        : absolute;
-    left: 0;
-    z-index: 90;
-    top: 30%;
+    left            : 0;
+    z-index         : 90;
+    top             : 30%;
+
+    @media screen and (max-width:1054px) {
+        width : 60%;
+        height: 50%;
+        left  : 5%;
+        top   : 30%;
+    }
+
+    @media screen and (max-width: 500px) {
+        width: 60%;
+        height: 40%;
+    }
 
     &::after {
         content          : "";

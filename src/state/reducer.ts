@@ -1,10 +1,11 @@
 import InitialState from "../types/initialState";
-import { ACTIONS } from './actions'
+import { ACTIONS } from './actions';
 
 const initialState: InitialState = {
     bgColor: '#076459',
     imageSize: '40',
-    opacityValue: '100'
+    opacityValue: '100',
+    bgPattern: ''
 }
 
 const reducer = (state = initialState || {}, { type = '', payload }: { type: string, payload: any }): InitialState => {
@@ -25,6 +26,12 @@ const reducer = (state = initialState || {}, { type = '', payload }: { type: str
             return {
                 ...state,
                 opacityValue: payload
+            }
+
+        case ACTIONS.BG_PATTERN:
+            return {
+                ...state,
+                bgPattern: payload
             }
 
         default:
